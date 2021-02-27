@@ -1,0 +1,76 @@
+/* Week Ten: Final Project */
+/* Signature Portfolio Assignment - Restaurant Web Application */
+/* Allison Adolphson ICT 4510 Advanced Website Design & Management */
+/* CSS File */
+
+/* REMOVE ME - I'm just here to hold space on the fake nav */
+.about {
+    padding-top: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Information */
+.aboutLink {
+    color: #96684F;
+    font-family: 'Economica', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.aboutLink:hover {
+    color: #E04F2E;
+    font-weight: bold;
+    text-decoration: none;
+}
+.infoBarBottom {
+    display: flex;
+    justify-content: flex-end;
+}
+.infoBarTop {
+    display: flex;
+    justify-content: flex-start;
+}
+.infoImgOne {
+    padding: 25px 0 0 50px;
+}
+.infoImgTwo {
+    padding: 25px 50px 0 0;
+}
+.information {
+    width: 100vw;
+}
+.information h1 {
+    color: #E6E1D0;
+    font-size: 25px;
+    text-align: center;
+}
+.information p {
+    color: #E6E1D0;
+}
+.infoCaptionCard {
+    background-color: #291713;
+    height: 301px;
+    margin-top: 25px;
+    padding: 25px;
+    text-align: center;
+    width: 300px;
+}
+#mapBoxMap {
+    height: 450px;
+}
+.mapContainer {
+    width: 100%;
+}
+
+* Media Queries */
+@media (min-width: 769px) {
+    /* Properties for Large Display */
+    }
+@media (max-width: 800px) {
+    /* Properties for Medium Display */
+}
+@media (max-width: 480px) {
+    /* Properties for Small Display */
+}

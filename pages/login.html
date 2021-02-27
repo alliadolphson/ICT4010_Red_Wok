@@ -1,0 +1,67 @@
+<!--Allison Adolphson ICT 4510 Advanced Website Design & Management-->
+<!--Date:  February 14, 2021-->
+<!--Week Ten: Final Project-->
+<!--Signature Portfolio Assignment - Restaurant Web Application-->
+<!--HTML File-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Red Wok</title>
+    <!-- Stylesheet Reference(s) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/login_styles.css">
+    <!--Import Fonts from Google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!--English Language Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Economica&display=swap" rel="stylesheet">
+    <!--Chinese (Simplified) Language Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet">
+    <!--Import JavaScript File(s)-->
+    <script src="../js/loginHandler.js"></script>
+</head>
+
+<!-- Navigation Bar -->
+<body class="homepage">
+    <nav class="navbar fixed-top navbar-expand-md">
+        <a class="navbar-brand" href="/index.html"><img class="logo" src="../images/logo.png" alt="Red Wok Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link active" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="../pages/login.html">Login</a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Page Content -->
+<article class="subpage">
+    <div class="container loginContainer loginWrapper">
+        <label for="inputUsername" class="col-sm-2 col-form-label">Username:</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" placeholder="Enter Username" name="inputUsername" id="inputUsername" aria-label="username input">
+        </div>
+        <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="password" placeholder="Enter Password" name="inputPassword" id="inputPassword" aria-label="password input">
+        </div>
+        <button type="button" onclick="attemptLogin()" class="btn btn-dark">Submit</button>
+    </div>
+    <div class="successMessage hidden">
+        <h1>Congratulations!</h1>
+        <p>Thank you for logging in.</p>
+    </div>
+    <div class="errorMessage hidden">
+        <h1>Login Error</h1>
+        <p>Invalid Username or Password</p>
+    </div>
+</article>
+
+<!-- Footer -->
+<footer>
+</footer>

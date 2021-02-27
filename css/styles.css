@@ -1,0 +1,294 @@
+/* Week Ten: Final Project */
+/* Signature Portfolio Assignment - Restaurant Web Application */
+/* Allison Adolphson ICT 4510 Advanced Website Design & Management */
+/* CSS File */
+
+/* Table of Contents 
+---------------------------------------
+- Base Styles
+- Navigation Bar
+- Footer
+*/
+
+/* Base Styles */
+article {
+    background-color: #E6E1D0;
+    background-image: url(/images/waves.svg);
+    background-repeat: repeat;
+    display: flex;
+    justify-content: left;
+}
+article.subpage {
+    background-color: #E6E1D0;
+}
+h1 {
+    color: #2D130C;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+h1.mandarin {
+    color: #2D130C;
+    font-family: 'Long Cang', cursive;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+h2 {
+    color: #E6E1D0;
+    font-family: 'Economica', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+h2.mandarin {
+    color: #E6E1D0;
+    font-family: 'Long Cang', cursive;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 10px;
+}
+h3 {
+    color: #E6E1D0;
+    font-family: 'Long Cang', cursive;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 5px;
+    text-transform: uppercase;
+}
+p {
+    color: #291713;
+    font-family: 'Economica', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.photoCredit {
+    color: #291713;
+    font-family: 'Economica', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.photoLink {
+    color: #96684F;
+    font-family: 'Economica', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.photoLink:hover {
+    color: #E04F2E;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navigation */
+.logo {
+    height: 75px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+.navbar {
+    background-color: #291713;
+    font-family: 'Economica', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 0;
+    text-transform: uppercase;
+}
+.navbar-nav {
+    margin: none;
+    padding: 0 15px 0 0;
+    text-align: center;
+}
+.nav-link {
+    color: #E6E1D0;
+}
+.nav-link.active {
+    color: #E04F2E;
+    font-weight: bold;
+}
+.nav-link:hover {
+    color: #EBBF8C;
+}
+
+/* Map Styles */
+#mapBoxMap {
+    height: 450px;
+}
+
+/* Footer */
+.centerFooterContainer {
+    text-align: center;
+    width: 33%;
+}
+.footer {
+    background-color: #291713;
+    background-image: url(/images/footerbg2.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    padding-top: 25px;
+    text-align: center;
+    width: 100%;
+}
+.footer .address {
+    color: #E6E1D0;
+    font-family: 'Long Cang', cursive;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.footer .tag {
+    color: #E6E1D0;
+    font-family: 'Economica', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding-bottom: 8px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.footerContainer {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    padding-top: 25px;
+}
+.footerDetails {
+    padding-bottom: 0;
+    padding-top: 5px;
+}
+.footerLogo {
+    height: 55px;
+}
+.footer .socialMediaConnect {
+    padding-top: 5px;
+    text-align: center;
+}
+.footer .socialMediaLink {
+    color: #E04F2E;
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.footer .socialMediaLink:hover {
+    color: #EBBF8C;
+}
+.footer span {
+    display: block;
+}
+.form-control {
+    margin-bottom: 10px;
+}
+.leftFooterContainer {
+    text-align: center;
+    width: 25%;
+}
+.pageLink {
+    color: #E04F2E;
+    font-size: 16px;
+    padding: 0 10px 0 10px;
+}
+.pageLink:hover {
+    color: #EBBF8C;
+    text-decoration: none;
+}
+.rightFooterContainer {
+    text-align: center;
+    width: 25%;
+    line-height: 15px;
+}
+.rightFooterContainer h3.email {
+    padding-top: 5px;
+}
+
+/* Media Queries */
+@media (min-width: 769px) {
+    /* Properties for Large Display */
+    }
+@media (max-width: 780px) {
+    /* Properties for Medium Display */
+    /* Navigation */
+    .logo {
+        margin: 0;
+        width: 300px;
+    }
+
+    .navbar-nav {
+        margin-right: 25px;
+    }
+}
+@media (max-width: 480px) {
+    /* Properties for Small Display */
+    /* Navigation */
+    .navbar-brand {
+        margin: 0;
+    }
+    .navbar-toggler {
+        margin: 0;
+    }
+    .logo {
+        width: 290px;
+    }
+    .navbar-nav {
+        padding: 0;
+        margin: 0;
+    }
+    .navbar .navbar-collapse {
+        text-align: center;
+        }
+    .navbar-toggler-icon {
+        color: #E6E1D0;
+    }
+    /* Footer */
+    .footer {
+        background-size: 100vh;
+        display: inline-block;
+        height: 100%;
+    }
+    .footerContainer {
+        display: block;
+    }
+    .footer .footerDetails{
+        padding: 10px 0 0 0;
+    }
+    .footer .footerDetails.hours {
+        text-align: right;
+    }
+    .footer .socialMediaConnect {
+        display: flex;
+        justify-content: center;
+        padding: 0 0 15px 0;
+    }
+    .footer .socialMediaLink {
+        font-size: 18px;
+    }
+    .centerFooterContainer, .leftFooterContainer, .rightFooterContainer {
+        padding-bottom: 10px;
+        width: 100vw;
+    }
+    .centerFooterContainer .form-group {
+        padding: 0 25px 0 25px;
+    }
+}
+@media (max-height: 420px) {
+    /* Properties for Medium Display */
+    /* Navigation */
+    .navbar-nav {
+        padding: 0;
+        margin: 0;
+        margin-right: 20px;
+    }
+    .navbar .navbar-collapse {
+        text-align: center;
+        }
+    .navbar-toggler {
+        margin-right: 20px;
+    }
+    .navbar-toggler-icon {
+        color: #A9A9A9;
+    }
+}

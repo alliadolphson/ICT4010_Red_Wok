@@ -1,0 +1,117 @@
+<!--Allison Adolphson ICT 4510 Advanced Website Design & Management-->
+<!--Date:  February 14, 2021-->
+<!--Week Ten: Final Project-->
+<!--Signature Portfolio Assignment - Restaurant Web Application-->
+<!--HTML File-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Red Wok</title>
+    <!-- Stylesheet Reference(s) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Reference Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+    <!--Import Fonts from Google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!--English Language Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Economica&display=swap" rel="stylesheet">
+    <!--Chinese (Simplified) Language Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet">
+    <!-- Import Leaflet Javascript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" 
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <!--Import JavaScript File(s)-->
+    <script src="../js/loginHandler.js"></script>
+    <script src="https://kit.fontawesome.com/8d3725dab7.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- Navigation Bar -->
+<body class="homepage">
+    <nav class="navbar fixed-top navbar-expand-md">
+        <a class="navbar-brand" href="/index.html"><img class="logo" src="images/logo.png" alt="Red Wok Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link active" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="pages/about.html">About</a>
+                <a class="nav-link" href="pages/carousel.html">Carousel</a>
+                <a class="nav-link" href="pages/menu.html">Menu</a>
+                <a class="nav-link" href="pages/login.html">Login</a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Page Content -->
+<article>
+</article>
+
+<!-- Footer -->
+<footer>
+    <div class="footer">
+        <img src="images/titles/rwlogo.png" class="footerLogo" alt="Red Wok Logo">
+        <div class="footerContainer">
+            <div class="leftFooterContainer">
+                <h2>Our Location</h2>
+                <h2 class="mandarin">区世纪大道1号</h2>
+                <h2 class="mandarin">区陆家嘴金融贸易</h2>
+                <h2 class="mandarin">上海市浦东新</h2>
+                <a class="pageLink" href="pages/about.html">获取路线</a>
+                <!-- <h3>1 Century Ave</h3>
+                <h3>Lu Jia Zui</h3>
+                <h3>Pudong, Shanghai, China</h3>
+                <a class="pageLink" href="pages/about.html">Get Directions</a> -->
+            </div>
+            <div class="centerFooterContainer">
+                <div class="address footerDetails">
+                    <h2>Receive News & Offers</h2>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="emailFormControl" placeholder="Enter Your Email Address">
+                        <button type="button emailBtn" onclick="attemptLogin()" class="btn btn-dark">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="rightFooterContainer">
+                <h2>Get In Touch</h2>
+                <h3>+86 21 5879 1888</h3>
+                <h3>+86 21 5879 3003</h3>
+                <h3 class="email">team@redwok.com</h3>
+                <div class="socialMediaConnect">
+                    <a class="socialMediaLink fa fa-renren" href="http://www.renren.com" target="_BLANK" aria-label="RenRen"></a>
+                    <a class="socialMediaLink fa fa-weibo" href="https://weibo.com" target="_BLANK" aria-label="Weibo"></a>
+                    <a class="socialMediaLink fa fa-wechat" href="https://www.wechat.com/" target="_BLANK" aria-label="WeChat"></a>
+                    <a class="socialMediaLink fa fa-qq" href="https://www.qq.com/" target="_BLANK" aria-label="Tencent QQ"></a>
+                </div>
+            </div>
+        </div>
+        <div class="tag bottomFooterContainer">
+            <div class="smLinksFooter english">
+                <a class="pageLink" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="pageLink" href="pages/about.html">About</a>
+                <a class="pageLink" href="pages/menu.html">Menu</a>
+                <a class="pageLink" href="pages/login.html">Login</a>
+            </div>
+            <div class="smLinksFooter mandarin">
+                <a class="pageLink" href="/index.html">主页 <span class="sr-only">(current)</span></a>
+                <a class="pageLink" href="pages/about.html">关于</a>
+                <a class="pageLink" href="pages/menu.html">菜单</a>
+                <a class="pageLink" href="pages/login.html">登录</a>
+            </div>
+            <div class="tag footerDetails">
+                Alli Adolphson Roof | ICT-4510 Portfolio Assignment | University of Denver
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Import JavaScript File -->
+    <script src="../javascript/leaflet.js"></script>
+</body>

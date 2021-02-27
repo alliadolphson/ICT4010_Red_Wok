@@ -1,0 +1,63 @@
+/* Week Ten: Final Project */
+/* Signature Portfolio Assignment - Restaurant Web Application */
+/* Allison Adolphson ICT 4510 Advanced Website Design & Management */
+/* CSS File */
+
+/* Login */
+.btn-dark {
+    background-color: #E04F2E;
+    border-color: #E04F2E;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+.btn-dark:hover {
+    background-color: #EBBF8C;
+    border-color: #EBBF8C;
+    color: #291713;
+}
+.col-form-label {
+    color: #291713;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.form-control {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+.form-control:focus {
+    color: #291713;
+    background-color: #fff;
+    border-color: #E04F2E;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgb(224, 79, 46, .8);
+}
+.hidden {
+    display: none;
+}
+.loginContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 65px;
+    width: 50vw;
+}
+.loginWrapper {
+    padding-top: 150px;
+}
+.nav-link {
+    cursor: pointer;
+}
+.nav-link:hover {
+    cursor: pointer;
+}
+.errorMessage {
+    padding: 20px;
+    text-align: center;
+}
+.successMessage {
+    padding-top: 200px;
+    text-align: center;
+}

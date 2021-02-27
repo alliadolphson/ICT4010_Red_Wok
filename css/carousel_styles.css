@@ -1,0 +1,82 @@
+/* Week Ten: Final Project */
+/* Signature Portfolio Assignment - Restaurant Web Application */
+/* Allison Adolphson ICT 4510 Advanced Website Design & Management */
+/* CSS File */
+
+/* Carousel */
+.captionCard {
+    align-items: center;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.captionCard h1 {
+    color: #FFFFFF;
+}
+.carousel {
+    padding-top: 85px;
+    width: min(75vw, 850px);
+}
+.carousel_background {
+    background-image: url(/images/carouselbg.png);
+    background-repeat: no-repeat;
+    background-position: 0px 85px;
+    display: flex;
+    justify-content: left;
+    padding-top: 75px;
+    width: 100%;
+}
+.carousel-caption {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+}
+.carousel-control-prev, .carousel-control-next {
+    top: 70px;
+}
+.carousel_position {
+    margin-left: 185px;
+}
+
+* Media Queries */
+@media (min-width: 769px) {
+    /* Properties for Large Display */
+    }
+@media (max-width: 780px) {
+    /* Properties for Medium Display */
+    .carousel_background {
+        background-size: 840px;
+    }
+    .carousel {
+        padding-top: 75px;
+        width: 75vw;
+    }
+    .carousel_position {
+        margin-left: 150px;
+    }
+    .photoCredit {
+        width: 75vw;
+    }
+}
+@media (max-width: 480px) {
+    /* Properties for Small Display */
+    .carousel_background {
+        background-size: 700px;
+    }
+    .carousel {
+        padding-top: 65px;
+        width: 60vw;
+    }
+    .carousel_position {
+        margin-left: 130px;
+    }
+    .photoCredit {
+        width: 225px;
+    }
+}
