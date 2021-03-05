@@ -15,7 +15,7 @@ let menuData = {
   'Pickled Cucumbers': {
     characters: '酱黄瓜',
     image: 'TBD',
-    category: 'apps'
+    category: 'soups'
   }
 };
 
@@ -248,23 +248,24 @@ function displayMenuItems (result) {
   });
 }
 
-// Function to Initialize Filters on Menu
 function initMenuFilter () {
-  console.log('Hello');
-  console.log($);
-  $('.menuFilterBtn').click(function (event) {
-    // Determine Button Clicked by Data Category Attribute>
-    console.log(event);
-    var category = $(this).attr('data-category');
-    console.log(category);
-    // Find Tiles w/ Class Matching Clicked Data Cateogory>
-    $('.menuCard').each(function (index, tile) {
-      console.log(tile);
-      if ($(tile).hasClass(category)) {
-        $(tile).show();
-      } else {
-        $(tile).hide();
-      }
+  let buttons = document.querySelectorAll('.menuFilterBtn');
+  // Add Event Listener to Menu Filter Buttons
+  buttons.forEach ((button) => {
+    button.addEventListener('click', () => {
+      // Determine Category (button clicked)
+      let category = button.getAttribute('data-category');
+      // Find Cards w/ Matching Clicked Category
+      let cards = document.querySelectorAll('.menuCard');
+      cards.forEach((card) => {
+        // If it has the class, show card
+        if (card.classList.contains(category)) {
+          card.classList.remove('hidden');
+        } else {
+          // Else, hide card
+          card.classList.add('hidden');
+        }
+      });
     });
   });
 }
