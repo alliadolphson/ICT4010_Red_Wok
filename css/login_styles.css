@@ -42,7 +42,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 65px;
-    width: 50vw;
+    width: 75vw;
 }
 .loginWrapper {
     padding-top: 150px;
@@ -53,11 +53,21 @@
 .nav-link:hover {
     cursor: pointer;
 }
-.errorMessage {
-    padding: 20px;
+
+/* Inputs */
+.tall {
+    height: 250px;
+}
+
+/* Menu Form */
+.formMessage {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
     text-align: center;
 }
-.successMessage {
-    padding-top: 200px;
-    text-align: center;
+.menuSubpage {
+    display: flex;
+    flex-direction: column;
 }

@@ -1,5 +1,5 @@
 <!--Allison Adolphson ICT 4510 Advanced Website Design & Management-->
-<!--Date:  February 14, 2021-->
+<!--Date:  March 4, 2021-->
 <!--Week Ten: Final Project-->
 <!--Signature Portfolio Assignment - Restaurant Web Application-->
 <!--HTML File-->
@@ -12,7 +12,8 @@
     <title>Red Wok</title>
     <!-- Stylesheet Reference(s) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/menu_styles.css">
     <!-- Reference Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -28,7 +29,9 @@
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
     <!--Import JavaScript File(s)-->
-    <script src="../js/loginHandler.js"></script>
+    <script src="../javascript/functions.js"></script>
+    <script src="../javascript/viewMenuHandler.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8d3725dab7.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </head>
@@ -36,23 +39,44 @@
 <!-- Navigation Bar -->
 <body class="homepage">
     <nav class="navbar fixed-top navbar-expand-md">
-        <a class="navbar-brand" href="/index.html"><img class="logo" src="images/logo.png" alt="Red Wok Logo"></a>
+        <a class="navbar-brand" href="/index.html"><img class="logo" src="../images/logo.png" alt="Red Wok Logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
                 <a class="nav-link active" href="/index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="pages/about.html">About</a>
-                <a class="nav-link" href="pages/carousel.html">Carousel</a>
-                <a class="nav-link" href="pages/menu.html">Menu</a>
-                <a class="nav-link" href="pages/login.html">Login</a>
+                <a class="nav-link" href="../pages/about.html">About</a>
+                <a class="nav-link" href="../pages/carousel.html">Carousel</a>
+                <a class="nav-link" href="../pages/menu.html">Menu</a>
+                <a class="nav-link" href="../pages/login.html">Login</a>
             </div>
         </div>
     </nav>
 
 <!-- Page Content -->
 <article>
+    <div class="menuContainer">
+        <div class="menuFilterRow">
+            <div class="menuFilterBtn btn" data-category="all">All Items</div>
+            <div class="menuFilterBtn btn" data-category="apps">Appetizers</div>
+            <div class="menuFilterBtn btn" data-category="soups">Soups</div>
+            <div class="menuFilterBtn btn" data-category="noodles">Noodles</div>
+            <div class="menuFilterBtn btn" data-category="main">Main Courses</div>
+            <div class="menuFilterBtn btn" data-category="dessert">Desserts</div>
+        </div>
+        <div id="menuGrid" class="menuGrid">
+            <div id="menuCardTemplate" class="hidden">
+                <div class="menuCard all CATEGORY">
+                    <img src="SOURCE" alt="ALT" class="infoImgOne">
+                    <h1 class="mandarin">CHARACTER</h1>
+                    <h1>ITEM</h1>
+                    <h3>PRICE</h3>
+                    <p>DESCRIPTION</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </article>
 
 <!-- Footer -->
@@ -112,7 +136,3 @@
         </div>
     </div>
 </footer>
-
-    <!-- Import JavaScript File -->
-    <script src="../javascript/leaflet.js"></script>
-</body>

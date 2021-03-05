@@ -30,6 +30,9 @@
         crossorigin=""/>
     <!-- Import Functions JavaScript -->
     <script src='../javascript/functions.js'></script>
+    <script src="../javascript/mainHandler.js"></script>
+    <script src="https://kit.fontawesome.com/8d3725dab7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </head>
 
 <nav class="navbar fixed-top navbar-expand-md">
@@ -50,14 +53,12 @@
             <div class="infoCaptionCard">
                 <h1>Catering</h1>
                 <p>Let Red Wok bring the taste of Shanghai to your next event. From intimate dinners to events large and small, let us share what's cooking in our kitchen!</p>
-                <a class="aboutLink" href="pages/about.html">Inquire Today</a>
             </div>
         </div>
         <div class="infoBarBottom">
             <div class="infoCaptionCard">
                 <h1>Events</h1>
                 <p>Host your next gathering in our cozy, ecclectic dining room. We comfortably host groups of up to 50. Let us help you plan your next speical event!</p>
-                <a class="aboutLink" href="pages/about.html">Inquire Today</a>
             </div>
             <img src="../images/information/spicy-wontons.jpg" alt="Spicy Wontons" class="infoImgTwo" id="wonton">
         </div>
@@ -67,9 +68,44 @@
         </div>
     </div>
     <div class="mapContainer">
+        <div class="mapInfoBar">
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link contactInfo active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="far fa-clock"></i></button>
+                    <button class="nav-link contactInfo" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fas fa-map-marked"></i></buttona>
+                    <button class="nav-link contactInfo" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-envelope"></i></button>
+                </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-hours" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <h1>Now Open for Lunch & Dinner</h1>
+                        <h3>Sunday - Thursday:</h3>
+                        <h3>11:00 AM - 10:00 PM</h3>
+                        <h3>Friday & Saturday:</h3>
+                        <h3>11:00 AM - 11:00 PM</h3>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-address" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <h1>Stop in and see us today!</h1>
+                        <h2 class="mandarin">区世纪大道1号</h2>
+                        <h2 class="mandarin">区陆家嘴金融贸易</h2>
+                        <h2 class="mandarin">上海市浦东新</h2>
+                        <h3>1 Century Ave</h3>
+                        <h3>Lu Jia Zui</h3>
+                        <h3>Pudong, Shanghai, China</h3>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <h1>Get In Touch</h1>
+                        <h3>+86 21 5879 1888</h3>
+                        <h3>+86 21 5879 3003</h3>
+                        <h3 class="email">team@redwok.com</h3>
+                    </div>
+                </div>
+              </div>
+        </div>
         <div id="mapBoxMap"></div>
     </div>
 </article>
 
 <!-- Import JavaScript File -->
 <script src="../javascript/leaflet.js"></script>
+
+</body>

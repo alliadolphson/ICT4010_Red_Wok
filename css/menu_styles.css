@@ -1,0 +1,12 @@
+/* Week Ten: Final Project */
+/* Signature Portfolio Assignment - Restaurant Web Application */
+/* Allison Adolphson ICT 4510 Advanced Website Design & Management */
+/* CSS File */
+
+/* Menu Items */
+.menuContainer {
+    padding-top: 85px;
+}
+.hidden {
+    display: none;
+}

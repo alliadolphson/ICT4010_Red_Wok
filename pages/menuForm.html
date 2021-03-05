@@ -1,5 +1,5 @@
 <!--Allison Adolphson ICT 4510 Advanced Website Design & Management-->
-<!--Date:  February 14, 2021-->
+<!--Date:  March 1, 2021-->
 <!--Week Ten: Final Project-->
 <!--Signature Portfolio Assignment - Restaurant Web Application-->
 <!--HTML File-->
@@ -22,8 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet">
     <!--Import JavaScript File(s)-->
     <script src="../javascript/functions.js"></script>
-    <script src="../javascript/loginHandler.js"></script>
-</head> 
+    <script src="../javascript/menuHandler.js"></script>
+</head>
 
 <!-- Navigation Bar -->
 <body class="homepage">
@@ -35,27 +35,37 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
                 <a class="nav-link active" href="/index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="../pages/login.html">Login</a>
+                <a class="nav-link" onclick="logoutUser()">Logout</a>
             </div>
         </div>
     </nav>
 
-<!-- Page Content -->
-<article class="subpage">
+    <!-- Page Content -->
+<article class="subpage menuSubpage">
     <div class="container loginContainer loginWrapper">
-        <label for="inputUsername" class="col-sm-2 col-form-label">Username:</label>
+        <label for="inputItemName" class="col-sm-2 col-form-label">Item Name:</label>
         <div class="col-sm-10">
-            <input class="form-control" type="text" placeholder="Enter Username" name="inputUsername" id="inputUsername" aria-label="username input">
+            <input class="form-control" type="text" placeholder="Enter Item Name" name="inputItemName" id="inputItemName" aria-label="item name input">
         </div>
-        <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
+        <label for="inputDescription" class="col-sm-2 col-form-label">Item Description:</label>
         <div class="col-sm-10">
-            <input class="form-control" type="password" placeholder="Enter Password" name="inputPassword" id="inputPassword" aria-label="password input">
+            <textarea class="form-control tall" type="text" placeholder="Enter Item Description" name="inputDescription" id="inputDescription" aria-label="description input"></textarea>
         </div>
-        <button type="button" onclick="attemptLogin()" class="btn btn-dark">Submit</button>
+        <label for="inputPrice" class="col-sm-2 col-form-label">Item Price:</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" placeholder="Enter Item Price With $ & ." name="inputPrice" id="inputPrice" aria-label="price input">
+        </div>
+        <button type="button" onclick="createMenuItem()" class="btn btn-dark">Submit</button>
     </div>
-    <div class="errorMessage hidden">
-        <h1>Login Error</h1>
-        <p>Invalid Username or Password</p>
+    <div class="formMessage">
+        <div class="successMessage hidden">
+            <h1>Success!</h1>
+            <p>New menu item was added to the database.</p>
+        </div>
+        <div class="errorMessage hidden">
+            <h1>Error</h1>
+            <p>Input was not accepted. Please try again.</p>
+        </div>
     </div>
 </article>
 
