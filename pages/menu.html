@@ -57,9 +57,9 @@
 <article>
     <div class="menuContainer">
         <div class="menuFilterRow">
-            <div class="menuFilterBtn btn" data-category="all">All Items</div>
+            <div class="menuFilterBtn btn active" data-category="all">All Items</div>
             <div class="menuFilterBtn btn" data-category="apps">Appetizers</div>
-            <div class="menuFilterBtn btn" data-category="soups">Soups</div>
+            <div class="menuFilterBtn btn" data-category="soup">Soups</div>
             <div class="menuFilterBtn btn" data-category="noodles">Noodles</div>
             <div class="menuFilterBtn btn" data-category="main">Main Courses</div>
             <div class="menuFilterBtn btn" data-category="dessert">Desserts</div>
@@ -67,13 +67,19 @@
         <div id="menuGrid" class="menuGrid">
             <div id="menuCardTemplate" class="hidden">
                 <div class="menuCard all CATEGORY">
-                    <img src="SOURCE" alt="ALT" class="infoImgOne">
-                    <h1 class="mandarin">CHARACTER</h1>
-                    <h1>ITEM</h1>
-                    <h3>PRICE</h3>
-                    <p>DESCRIPTION</p>
+                    <img src="SOURCE" alt="ALT" class="menuImg">
+                    <div class="menuTextBox">
+                        <h1 class="mandarin">CHARACTER</h1>
+                        <h1>ITEM</h1>
+                        <p>DESCRIPTION</p>
+                        <h3>PRICE</h3>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="photoCredit">
+            All Photos by Judy of
+            <a class="photoLink" href="https://thewoksoflife.com/">The Woks of Life</a>
         </div>
     </div>
 </article>

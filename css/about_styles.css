@@ -68,9 +68,6 @@
     display: flex;
     justify-content: space-between;
 }
-.fade {
-    height: 450px;
-}
 .far, .fas {
     font-size: 50px;
     padding: 25px;
@@ -89,6 +86,15 @@
 }
 .mapContainer h1 {
     color: #96684F;
+}
+.mapContainer .socialMediaLink {
+    color: #E04F2E;
+    font-size: 20px;
+    padding: 0 5px 0 5px;
+    text-decoration: none;
+}
+.mapContainer .socialMediaLink:hover {
+    color: #EBBF8C;
 }
 .mapInfoBar {
     width: 50%;
@@ -116,6 +122,23 @@
     }
 @media (max-width: 800px) {
     /* Properties for Medium Display */
+    .mapContainer {
+        flex-direction: column;
+    }
+    #mapBoxMap {
+        height: 450px;
+        width: 100%;
+    }
+    .far, .fas {
+        font-size: 25px;
+        padding: 5px;
+    }
+    .mapInfoBar {
+        width: 100%;
+    }
+    .nav-pills .nav-link.contactInfo.active, .nav-pills .nav-link.contactInfo {
+        height: 65px;
+    }
 }
 @media (max-width: 480px) {
     /* Properties for Small Display */

@@ -5,17 +5,110 @@
 // JavaScript File - General Functions for all HTML pages
 
 // Variables
+// Set API Key into Session Storage
+sessionStorage.setItem('apiKey', 'a2eca88302dd3c00727cdb6c9c8c856a');
+
 // Map Characters, Image, & Category to Menu Item
 let menuData = {
   'Xiao Long Bao': {
     characters: '小笼包',
-    image: 'TBD',
+    image: '../images/menu/XiaoLongBao.jpg',
     category: 'apps'
   },
   'Pickled Cucumbers': {
     characters: '酱黄瓜',
-    image: 'TBD',
-    category: 'soups'
+    image: '../images/menu/Cucumbers.jpg',
+    category: 'apps'
+  },
+  'Pan-Fried Pork Buns': {
+    characters: '海生煎馒头',
+    image: '../images/menu/PorkBuns.jpg',
+    category: 'apps'
+  },
+  'Qiang Bing': {
+    characters: '羌饼',
+    image: '../images/menu/FlatBread.jpg',
+    category: 'apps'
+  },
+  'Grass Jelly': {
+    characters: '凉粉',
+    image: '../images/menu/GrassJelly.jpg',
+    category: 'dessert'
+  },
+  'Bai Tang Gao': {
+    characters: '白糖糕',
+    image: '../images/menu/BaiTangGao.jpg',
+    category: 'dessert'
+  },
+  'Bao Bing': {
+    characters: '保冰',
+    image: '../images/menu/BaoBing.jpg',
+    category: 'dessert'
+  },
+  'Shuang Pi Nai': {
+    characters: '双皮奶',
+    image: '../images/menu/ShuangPiNai.jpg',
+    category: 'dessert'
+  },
+  'You Bao Xia': {
+    characters: '油爆虾',
+    image: '../images/menu/YouBaoXia.jpg',
+    category: 'main'
+  },
+  'Hong Shao Rou': {
+    characters: '红烧肉',
+    image: '../images/menu/HongShaoRou.jpg',
+    category: 'main'
+  },
+  'Xiao Long Xia': {
+    characters: '小龙虾',
+    image: '../images/menu/XiaoLongXia.jpg',
+    category: 'main'
+  },
+  'Ziran Paigu': {
+    characters: '紫兰排骨',
+    image: '../images/menu/ZiranPaigu.jpg',
+    category: 'main'
+  },
+  'Cu Chao Mian': {
+    characters: '粗炒面',
+    image: '../images/menu/CuChaoMian.jpg',
+    category: 'noodles'
+  },
+  'Hot Sauce Noodles': {
+    characters: '辣酱面',
+    image: '../images/menu/HotSauceNoodles.jpg',
+    category: 'noodles'
+  },
+  'Cong You Ban Mian': {
+    characters: '葱油拌面',
+    image: '../images/menu/CongYouBanMian.jpg',
+    category: 'noodles'
+  },
+  'Lan Hu Mian': {
+    characters: '烂糊面',
+    image: '../images/menu/Homestyle.jpg',
+    category: 'noodles'
+  },
+  'San Xian Wontons': {
+    characters: '三仙馄饨',
+    image: '../images/menu/SanXian.jpg',
+    category: 'soup'
+  },
+  'Yan Dou Xian': {
+    characters: '盐都县',
+    image: '../images/menu/YanDouXian.jpg',
+    category: 'soup'
+  },
+  'Luo Song Tang': {
+    characters: '罗宋汤',
+    image: '../images/menu/LuoSongTang.jpg',
+    category: 'soup'
+  },
+  'Hong You Chao Shou': {
+    characters: '红油抄手',
+    image: '../images/menu/Sichuan.jpg',
+    category: 'soup'
   }
 };
 
@@ -217,6 +310,8 @@ function getMenuItems () {
     .then((response) => {
       return response.json();
     }) .then ((result) => {
+      result = addExtraData(result);
+      result = sortMenuItems(result);
       displayMenuItems(result);
       initMenuFilter();
     }) .catch ((err) => {
@@ -224,19 +319,48 @@ function getMenuItems () {
     });
 }
 
-// Function to Display Menu Items
-function displayMenuItems (result) {
+// Sort Menu Items
+function sortMenuItems (result) {
+  result.sort((a, b) => {
+    // Convert the categories to proper order
+    let categories = [
+      'apps',
+      'soup',
+      'noodles',
+      'main',
+      'dessert'
+    ];
+    // Run comparison
+    let indexA = categories.indexOf(a.category);
+    let indexB = categories.indexOf(b.category);
+    return indexA - indexB;
+  });
+  return result;
+}
+
+// Add Extra Data
+function addExtraData (result) {
   let menuItems = result.menu;
   menuItems.forEach ((menuItem) => {
-    // Get Additional Data from menuData variable
+    // Add in extra data
     let extraData = menuData[menuItem.item];
+    menuItem.characters = extraData.characters;
+    menuItem.image = extraData.image;
+    menuItem.category = extraData.category;
+  });
+  return menuItems;
+}
+
+// Function to Display Menu Items
+function displayMenuItems (menuItems) {
+  menuItems.forEach ((menuItem) => {
     // Get HTML template from DOM
     let template = document.getElementById('menuCardTemplate');
     let placeholder = template.innerHTML;
     // Replace strings with values from extraData
-    placeholder = placeholder.replace('CHARACTER', extraData.characters);
-    placeholder = placeholder.replace('SOURCE', extraData.image);
-    placeholder = placeholder.replace('CATEGORY', extraData.category);
+    placeholder = placeholder.replace('CHARACTER', menuItem.characters);
+    placeholder = placeholder.replace('SOURCE', menuItem.image);
+    placeholder = placeholder.replace('CATEGORY', menuItem.category);
     placeholder = placeholder.replace('ALT', menuItem.item);
     // Replace strings with values from JSON
     placeholder = placeholder.replace('ITEM', menuItem.item);
@@ -252,9 +376,17 @@ function initMenuFilter () {
   let buttons = document.querySelectorAll('.menuFilterBtn');
   // Add Event Listener to Menu Filter Buttons
   buttons.forEach ((button) => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (event) => {
+      console.log(event);
       // Determine Category (button clicked)
       let category = button.getAttribute('data-category');
+      // Remove any lingering 'active' classes when button is not selected
+      buttons.forEach((btn) => {
+        btn.classList.remove('active');
+      });
+      // Add Class to manage what was selected in DOM
+      let clicked = event.target;
+      clicked.classList.add('active');
       // Find Cards w/ Matching Clicked Category
       let cards = document.querySelectorAll('.menuCard');
       cards.forEach((card) => {

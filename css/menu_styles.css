@@ -3,10 +3,108 @@
 /* Allison Adolphson ICT 4510 Advanced Website Design & Management */
 /* CSS File */
 
-/* Menu Items */
-.menuContainer {
-    padding-top: 85px;
-}
+/* Menu Components */
 .hidden {
-    display: none;
+    display: none !important;
+}
+.menuCard {
+    box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);
+    display: flex;
+    margin: 10px;
+}
+.menuContainer {
+    background-color: rgba(255,255,255,0.35);
+    padding-top: 85px;
+    width: 100%;
+}
+.menuFilterRow {
+    background-color: #E04F2E;
+    padding: 10px;
+    text-align: center;
+}
+.menuGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10px 10px 10px;
+}
+.menuImg {
+    height: 200px;
+}
+.menuTextBox {
+    background-color: #E6E1D0;
+    height: 200px;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Typography */
+.menuTextBox h1 {
+    color: #75816B;
+    text-transform: none;
+}
+.menuTextBox h1.mandarin {
+    color: #E04F2E;
+    font-size: 32px;
+}
+.menuTextBox h2 {
+    font-size: 12px;
+}
+.menuTextBox h3 {
+    color: #96684F;
+    font-size: 24px;
+    text-align: right;
+}
+.menuFilterBtn {
+    background-color: #E6E1D0;
+    font-family: 'Economica', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 5px;
+    padding: 0 15px 0 15px;
+    text-transform: uppercase;
+}
+.menuFilterBtn.active {
+    background-color: #291713;
+    color: #E6E1D0;
+}
+.mapContainer .socialMediaLink {
+    color: #E04F2E;
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.mapContainer .socialMediaLink:hover {
+    color: #EBBF8C;
+}
+
+/* Media Queries */
+@media (min-width: 769px) {
+    /* Properties for Large Display */
+    }
+@media (max-width: 1025px) {
+    .menuTextBox h1 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1035px) {
+    /* Properties for Medium Display */
+    .menuGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .menuTextBox h1 {
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px) {
+    /* Properties for Small Display */
+    .menuCard {
+        background-color: #E6E1D0;
+    }
+    .menuImg {
+        height: 125px;
+    }
+    .menuTextBox {
+        height: 275px;
+    }
 }

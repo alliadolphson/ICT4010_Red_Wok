@@ -53,6 +53,12 @@
 .nav-link:hover {
     cursor: pointer;
 }
+.subpage.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
 
 /* Inputs */
 .tall {

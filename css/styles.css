@@ -16,7 +16,9 @@ article {
     background-image: url(/images/waves.svg);
     background-repeat: repeat;
     display: flex;
+    height: 100vh;
     justify-content: left;
+    width: 100vw;
 }
 article.subpage {
     background-color: #E6E1D0;

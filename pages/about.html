@@ -29,6 +29,7 @@
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin=""/>
     <!-- Import Functions JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src='../javascript/functions.js'></script>
     <script src="../javascript/mainHandler.js"></script>
     <script src="https://kit.fontawesome.com/8d3725dab7.js" crossorigin="anonymous"></script>
@@ -71,9 +72,9 @@
         <div class="mapInfoBar">
             <div class="d-flex align-items-start">
                 <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <button class="nav-link contactInfo active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="far fa-clock"></i></button>
-                    <button class="nav-link contactInfo" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fas fa-map-marked"></i></buttona>
-                    <button class="nav-link contactInfo" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-envelope"></i></button>
+                    <button class="nav-link contactInfo active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-hours" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="far fa-clock"></i></button>
+                    <button class="nav-link contactInfo" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-address" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fas fa-map-marked"></i></buttona>
+                    <button class="nav-link contactInfo" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-contact" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-envelope"></i></button>
                 </div>
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-hours" role="tabpanel" aria-labelledby="v-pills-home-tab">
@@ -95,8 +96,14 @@
                     <div class="tab-pane fade" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                         <h1>Get In Touch</h1>
                         <h3>+86 21 5879 1888</h3>
-                        <h3>+86 21 5879 3003</h3>
-                        <h3 class="email">team@redwok.com</h3>
+                        <h3>+86 21 5879 3003</h3><br>
+                        <h3 class="email">team@redwok.com</h3><br>
+                        <div class="socialMediaConnect">
+                            <a class="socialMediaLink fa fa-renren" href="http://www.renren.com" target="_BLANK" aria-label="RenRen"></a>
+                            <a class="socialMediaLink fa fa-weibo" href="https://weibo.com" target="_BLANK" aria-label="Weibo"></a>
+                            <a class="socialMediaLink fa fa-wechat" href="https://www.wechat.com/" target="_BLANK" aria-label="WeChat"></a>
+                            <a class="socialMediaLink fa fa-qq" href="https://www.qq.com/" target="_BLANK" aria-label="Tencent QQ"></a>
+                        </div>
                     </div>
                 </div>
               </div>
