@@ -12,16 +12,18 @@
 
 /* Base Styles */
 article {
-    background-color: #E6E1D0;
-    background-image: url(/images/waves.svg);
-    background-repeat: repeat;
     display: flex;
-    height: 100vh;
     justify-content: left;
-    width: 100vw;
 }
 article.subpage {
     background-color: #E6E1D0;
+}
+body {
+    background-color: #E6E1D0;
+    background-image: url(/images/waves.svg);
+    background-repeat: repeat;
+    height: 100vh;
+    width: 100vw;
 }
 h1 {
     color: #2D130C;

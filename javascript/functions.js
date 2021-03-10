@@ -118,13 +118,13 @@ function handleImageLoad () {
   let images = [
     {
       name: 'shanghai',
-      small: '../images/information/shanghai_noodles_sm.jpg',
-      large: '../images/information/shanghai_noodles.jpg'
+      small: './images/information/shanghai_noodles_sm.jpg',
+      large: './images/information/shanghai_noodles.jpg'
     },
     {
       name: 'wonton',
-      small: '../images/information/spicy-wontons_sm.jpg',
-      large: '../images/information/spicy-wontons.jpg'
+      small: './images/information/spicy-wontons_sm.jpg',
+      large: './images/information/spicy-wontons.jpg'
     }
   ];
   images.forEach((image) => {

@@ -67,15 +67,6 @@
     background-color: #291713;
     color: #E6E1D0;
 }
-.mapContainer .socialMediaLink {
-    color: #E04F2E;
-    font-size: 20px;
-    margin-left: 10px;
-    text-decoration: none;
-}
-.mapContainer .socialMediaLink:hover {
-    color: #EBBF8C;
-}
 
 /* Media Queries */
 @media (min-width: 769px) {

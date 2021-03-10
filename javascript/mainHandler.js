@@ -6,6 +6,5 @@
 
 // Event Listener - documentReady
 document.addEventListener('DOMContentLoaded', function () {
-    handleImageLoad();
-    resetSize();
-  });
+  resetSize();
+});

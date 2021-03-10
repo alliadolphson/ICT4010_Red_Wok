@@ -3,12 +3,18 @@
 /* Allison Adolphson ICT 4510 Advanced Website Design & Management */
 /* CSS File */
 
-/* REMOVE ME - I'm just here to hold space on the fake nav */
+#aboutFile {
+    padding-top: 50px;
+}
 .about {
     padding-top: 85px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+#contactFile {
+    margin-bottom: 50px;
+    padding-top: 100px;
 }
 
 /* Information */
@@ -23,6 +29,9 @@
     color: #E04F2E;
     font-weight: bold;
     text-decoration: none;
+}
+.about .photoCredit {
+    width: 100%;
 }
 .align-items-start {
     align-items: stretch !important;
@@ -77,7 +86,6 @@
     width: 75%;
 }
 .mapContainer {
-    background-color: #291713;
     display: flex;
     width: 100%;
 }
@@ -97,6 +105,7 @@
     color: #EBBF8C;
 }
 .mapInfoBar {
+    background-color: #291713;
     width: 50%;
 }
 .nav-pills .nav-link.contactInfo.active {
@@ -120,7 +129,7 @@
 @media (min-width: 769px) {
     /* Properties for Large Display */
     }
-@media (max-width: 800px) {
+@media (max-width: 813px) {
     /* Properties for Medium Display */
     .mapContainer {
         flex-direction: column;

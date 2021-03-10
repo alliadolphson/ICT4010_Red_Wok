@@ -10,9 +10,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Red Wok</title>
-    <!-- Stylesheet Reference(s) -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
     <!-- Reference Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -23,29 +20,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Economica&display=swap" rel="stylesheet">
     <!--Chinese (Simplified) Language Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet">
+    <!-- Stylesheet Reference(s) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/carousel_styles.css">
+    <link rel="stylesheet" href="./css/about_styles.css">
     <!-- Import Leaflet Javascript -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" 
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
+    <!-- Reference Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
     <!--Import JavaScript File(s)-->
     <script src="https://kit.fontawesome.com/8d3725dab7.js" crossorigin="anonymous"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src='../javascript/functions.js'></script>
+    <script src="../javascript/mainHandler.js"></script>
+    <script src="./javascript/leaflet.js"></script>
+    <script src="https://kit.fontawesome.com/8d3725dab7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </head>
 
 <!-- Navigation Bar -->
 <body class="homepage">
     <nav class="navbar fixed-top navbar-expand-md">
-        <a class="navbar-brand" href="/index.html"><img class="logo" src="images/logo.png" alt="Red Wok Logo"></a>
+        <a class="navbar-brand" href="./index.html"><img class="logo" src="images/logo.png" alt="Red Wok Logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-link active" href="/index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="pages/about.html">About</a>
-                <a class="nav-link" href="pages/carousel.html">Carousel</a>
+                <a class="nav-link active" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#aboutFile">About</a>
+                <a class="nav-link" href="#contactFile">Contact</a>
                 <a class="nav-link" href="pages/menu.html">Menu</a>
                 <a class="nav-link" href="pages/login.html">Login</a>
             </div>
@@ -53,8 +63,8 @@
     </nav>
 
 <!-- Page Content -->
-<article>
-</article>
+<div id="carouselFile"></div>
+<div id="aboutFile"></div>
 
 <!-- Footer -->
 <footer>
@@ -96,16 +106,16 @@
         </div>
         <div class="tag bottomFooterContainer">
             <div class="smLinksFooter english">
-                <a class="pageLink" href="/index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="pageLink" href="pages/about.html">About</a>
+                <a class="pageLink" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="pageLink" href="#aboutFile">About</a>
+                <a class="pageLink" href="#contactFile">Contact</a>
                 <a class="pageLink" href="pages/menu.html">Menu</a>
-                <a class="pageLink" href="pages/login.html">Login</a>
             </div>
             <div class="smLinksFooter mandarin">
-                <a class="pageLink" href="/index.html">主页 <span class="sr-only">(current)</span></a>
-                <a class="pageLink" href="pages/about.html">关于</a>
+                <a class="pageLink" href="./index.html">主页 <span class="sr-only">(current)</span></a>
+                <a class="pageLink" href="#aboutFile">关于</a>
+                <a class="pageLink" href="#contactFile">联络</a>
                 <a class="pageLink" href="pages/menu.html">菜单</a>
-                <a class="pageLink" href="pages/login.html">登录</a>
             </div>
             <div class="tag footerDetails">
                 Alli Adolphson Roof | ICT-4510 Portfolio Assignment | University of Denver
@@ -115,4 +125,9 @@
 </footer>
 
     <!-- Import JavaScript File -->
+    <script src='./javascript/stitching.js'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8d3725dab7.js" crossorigin="anonymous"></script>
 </body>
