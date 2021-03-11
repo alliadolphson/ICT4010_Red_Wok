@@ -73,9 +73,9 @@
 }
 
 /* Map */
-#v-pills-tab {
+#myTab {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .far, .fas {
     font-size: 50px;
@@ -89,7 +89,7 @@
     display: flex;
     width: 100%;
 }
-.mapContainer [type="button"] {
+.mapContainer [role="tab"] {
     border: 0;
 }
 .mapContainer h1 {
@@ -108,17 +108,20 @@
     background-color: #291713;
     width: 50%;
 }
-.nav-pills .nav-link.contactInfo.active {
+.nav-tabs .nav-link.contactInfo.active {
     background-color: #291713;
     color: #E04F2E;
 }
-.nav-pills .nav-link.contactInfo {
-    background-color: #75816B;
+.nav-tabs .nav-link.contactInfo {
+    border-radius: 0;
     color: #E6E1D0;
 }
-.nav-pills .nav-link.contactInfo.active, .nav-pills .nav-link.contactInfo {
-    border-radius: 0rem;
-    height: 150px;
+.nav-tabs .nav-link.contactInfo.active, .nav-tabs .nav-link.contactInfo {
+    border-radius: 0;
+    text-align: center;
+}
+.nav-tabs {
+    border: none;
 }
 .tab-pane {
     padding: 25px;
@@ -138,10 +141,6 @@
         height: 450px;
         width: 100%;
     }
-    .far, .fas {
-        font-size: 25px;
-        padding: 5px;
-    }
     .mapInfoBar {
         width: 100%;
     }
@@ -151,6 +150,10 @@
 }
 @media (max-width: 480px) {
     /* Properties for Small Display */
+    .far, .fas {
+        font-size: 25px;
+        padding: 5px;
+    }
     .infoCaptionCard {
         align-items: center;
         background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);

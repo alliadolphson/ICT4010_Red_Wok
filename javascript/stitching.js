@@ -22,7 +22,20 @@ fetch('./pages/carousel.html')
         handleImageLoad();
         // Initialize Map so as to avoid another async issue
         initializeMap();
+        // Initialize carousel... because async...
+        $('.carousel').carousel();
+        // Call scroll to hash
+        scrollToHash();
       });
   });
 
-// 
+// Function to scroll to a specific # in <div>
+function scrollToHash () {
+  let hash = window.location.hash;
+  if (hash) {
+    let element = document.querySelector(hash);
+    if (element) {
+      element.scrollIntoView();
+    }
+  }
+}
