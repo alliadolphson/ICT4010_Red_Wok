@@ -207,9 +207,17 @@ p {
 }
 
 /* Media Queries */
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
     /* Properties for Large Display */
+    .about .infoBarTop, .about .infoBarBottom {
+        justify-content: left;
+        margin-left: 185px;
     }
+    .about .photoCredit {
+        text-align: left;
+        margin-left: 185px;
+    }
+}
 @media (max-width: 780px) {
     /* Properties for Medium Display */
     /* Navigation */
