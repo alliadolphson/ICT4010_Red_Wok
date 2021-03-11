@@ -17,6 +17,7 @@ fetch('./pages/carousel.html')
         return response.text();
       })
       .then ((data) => {
+        initNav();
         document.querySelector('#aboutFile').innerHTML = data;
         // Call HandleImageLoad() so as to avoid async issues
         handleImageLoad();

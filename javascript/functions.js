@@ -372,12 +372,12 @@ function displayMenuItems (menuItems) {
   });
 }
 
+// Function to make the menu filtering work
 function initMenuFilter () {
   let buttons = document.querySelectorAll('.menuFilterBtn');
   // Add Event Listener to Menu Filter Buttons
   buttons.forEach ((button) => {
     button.addEventListener('click', (event) => {
-      console.log(event);
       // Determine Category (button clicked)
       let category = button.getAttribute('data-category');
       // Remove any lingering 'active' classes when button is not selected
@@ -398,6 +398,23 @@ function initMenuFilter () {
           card.classList.add('hidden');
         }
       });
+    });
+  });
+}
+
+// Function to move the 'active' class in Nav Bar
+function initNav () {
+  let buttons = document.querySelectorAll('.nav-link');
+  // Add Event Listener to Nav Links
+  buttons.forEach ((button) => {
+    button.addEventListener('click', (event) => {
+      // Remove any lingering 'active' classes when button is not selected
+      buttons.forEach((btn) => {
+        btn.classList.remove('active');
+      });
+      // Add Class to manage what was selected in DOM
+      let clicked = event.target;
+      clicked.classList.add('active');
     });
   });
 }
