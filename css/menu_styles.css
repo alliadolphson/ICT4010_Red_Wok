@@ -14,6 +14,7 @@
 }
 .menuContainer {
     background-color: rgba(255,255,255,0.35);
+    min-height: calc(100vh - 333px);
     padding-top: 85px;
     width: 100%;
 }

@@ -125,6 +125,16 @@ function handleImageLoad () {
       name: 'wonton',
       small: './images/information/spicy-wontons_sm.jpg',
       large: './images/information/spicy-wontons.jpg'
+    },
+    {
+      name: 'special',
+      small: './images/information/shanghai_shrimp_sm.jpg',
+      large: './images/information/shanghai_shrimp.jpg'
+    },
+    {
+      name: 'reserve',
+      small: './images/information/spicy-cucumbers_sm.jpg',
+      large: './images/information/spicy-cucumbers.jpg'
     }
   ];
   images.forEach((image) => {
