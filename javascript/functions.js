@@ -325,7 +325,7 @@ function getMenuItems () {
       displayMenuItems(result);
       initMenuFilter();
     }) .catch ((err) => {
-      // AHHHHHHHHHH! FIX ME! PLEASE!!!!!;
+      console.log(err);
     });
 }
 
@@ -354,9 +354,15 @@ function addExtraData (result) {
   menuItems.forEach ((menuItem) => {
     // Add in extra data
     let extraData = menuData[menuItem.item];
-    menuItem.characters = extraData.characters;
-    menuItem.image = extraData.image;
-    menuItem.category = extraData.category;
+    if (extraData) {
+      menuItem.characters = extraData.characters;
+      menuItem.image = extraData.image;
+      menuItem.category = extraData.category;
+    } else {
+      menuItem.characters = '不清楚';
+      menuItem.image = '../images/menu/coming_soon.jpg';
+      menuItem.category = '';
+    }
   });
   return menuItems;
 }
